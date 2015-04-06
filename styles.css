@@ -1,0 +1,23 @@
+
+
+.mainQuote  {
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #121212;
+  padding: 0 0 8px 0;
+  margin: 0;
+  
+  
+}
+
+
+.wholeQuote {
+  padding: 16px 0 12px 0;
+  font-size: 17px;
+  line-height: 23px;
+  color: #222;
+  margin: 0px;
+}
+
+
