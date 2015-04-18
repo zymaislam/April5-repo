@@ -20,4 +20,46 @@
   margin: 0px;
 }
 
+.title {
+	
+	  clear: both;
+  color: #333333;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 38px;
+  margin: 10px 0;
+  text-transform: none;
+  letter-spacing: normal;
+}
 
+.readMore {
+  color: #D61C17;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+
+.moreInfo{
+	display:none;
+	
+}
+
+.expanded .moreInfo {
+	display: block;
+}
+
+
+.yearsClean {
+  color: #D61C17;
+   font-weight: 600;
+}
+
+.source {
+	  font-weight: 600;
+}
+
+.location {
+	  font-weight: 600;
+}

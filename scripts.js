@@ -1,26 +1,32 @@
-for (var i=0; i<data.length; i++){
-	
-	var rowData = data[i];
-	
-	var template =
-	
-	
-	'<div class="quoteContainer"></div>'+
+for (var i=0; i<data.length; i++) {//openbrace1
 
-				'<div class="mainQuote">
-					For the past 26 years I've thought of heroin every day
-				</div>'+
-				'<div class="wholeQuote">
-					But never thought of using it. It never made anything better, just worse. Look, every junky is always "considering" getting clean. Every junky wants to be clean. Every using junky also wants more heroin. Call it a contradiction call it what you want. But no junky wants the life they have.
-				</div>'+
-				'<div class="source">
-					Katie
-				</div>'+
-				'<div class="yearsClean">
-					17 years clean
-				</div>'+
-				'<div class="location">
-					London,UK
-				</div>'
-		
-}
+	var rowData = data[i];
+
+	var $template = $('<div class="quoteContainer">'+
+	'<div class="mainQuote">'+rowData.mainQuote+'</div>'+
+	'<div class="readMore">Read More</div>'+
+	'<div class="moreInfo">'+
+	'<div class="wholeQuote">'+rowData.wholeQuote +'</div>'+
+	'<div class="source">'+rowData.source+'				</div>'+
+	'<div class="yearsClean">'+rowData.yearsClean+'			</div>'+
+	'<div class="location">'+rowData.location+ '</div>'+
+	'</div>'); //changed variable from template to $template to notify myself that I wrapped it
+
+	$template.find(".readMore").on("click", toggleContent);
+
+	function toggleContent(e) {//openbrace2
+		$quoteContainer = $(e.target).parent(); 
+		console.log ($quoteContainer)
+		if ($quoteContainer.hasClass("expanded")) {//openbrace3//you can see content!
+			$quoteContainer.removeClass("expanded") //this command removes content
+		}//closebrace3
+		 else {//openbrace4
+			$quoteContainer.addClass("expanded"); //since you cannot see content, this adds content!
+		}//openbrace4
+	}//closera
+
+
+	$('#dataContainer').append($template);
+
+	}
+
